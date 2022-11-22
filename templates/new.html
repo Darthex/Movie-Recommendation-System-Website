@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:position="http://www.w3.org/1999/xhtml" xmlns:left="http://www.w3.org/1999/xhtml"
+      xmlns:top="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recommended Site</title>
+    <script
+      src="https://kit.fontawesome.com/d8bc4c6626.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="shortcut icon"
+      href="/static/clapperboard.png"
+      type="image/x-icon"
+    />
+    <!-- Added Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <!--CSS Stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/style2.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="container" position:fixed left:0 top:0>
+      <div id="loading">
+        <span id="loading-img">Loading...</span>
+      </div>
+    </div>
+    <!-- Preloader End -->
+    <section>
+      <div class="one">
+        <h1>Your Recommended Movie :</h1>
+      </div>
+      <br>
+      <br>
+      <br>
+      <img src= {{ poster }}>
+      <div class="twelve">
+        <br>
+        <br>
+        <h3>{{sum}}</h3>
+      </div>
+
+      <div></div>
+      <br />
+      <br />
+      <br />
+      <form class="item" action="" method="post">
+        <button type="submit" name="list" value="submit">
+          <a href= {{url_for('index')}}>Retry</a>
+        </button>
+      </form>
+    </section>
+    <!-- Preloader JS -->
+    <script>
+      window.onload = function () {
+        document.getElementById("container").style.display = "none";
+        document.getElementById("").style.display = "none";
+      };
+      $(window).load(function () {
+        $("#loading").fadeOut();
+        $("#loading-img").delay(150).fadeOut("slow");
+      }),
+        4000;
+    </script>
+  </body>
+  <br />
+  <br />
+  <br />
+  <footer>&copy; 2022 Company, Inc. All rights reserved.</footer>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<body>-->
+<!--    <img src= {{ poster }}>-->
+<!--    <h1>{{sum}}</h1>-->
+<!--</body>-->
+<!--</html>-->

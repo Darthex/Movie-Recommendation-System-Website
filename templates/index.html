@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:left="http://www.w3.org/1999/xhtml" xmlns:position="http://www.w3.org/1999/xhtml"
+      xmlns:top="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="geeksforgeeks.org/favicon.gif" type="image/gif" />
+    <title>Movies Recommendation System</title>
+    <!-- <a href="https://www.flaticon.com/free-icons/google-play-movie" title="google play movie icons">Google play movie icons created by Freepik - Flaticon</a> -->
+    <!-- ICON -->
+    <script
+      src="https://kit.fontawesome.com/d8bc4c6626.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="shortcut icon" href="/static/clapperboard.png" type="image/x-icon"/>
+
+    <!-- Added Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+     <!--CSS Stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <!--Bootstrap Scripts-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+    <script defer src="/static/scrt.js"></script>
+
+
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="container" position:fixed left:0 top:0>
+      <div id="loading">
+          <span id="loading-img">Loading...</span>
+      </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Navigatin Bar -->
+      <div class="container ">
+        <header class="d-flex flex-wrap justify-content-center py-3 border-bottom">
+          <img src="/static/video-camera.gif" id="logo" alt="LOGO">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-4">TITLE OF MOVIES RS</span>
+          </a>
+
+          <ul class="nav nav-pills hidden" >
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          </ul>
+        </header>
+      </div>
+
+
+<!-- Trending movies part -->
+
+
+<div id="myCarousel" class="carousel slide hidden" data-bs-ride="carousel">
+  <div class="carousel-indicators hidden">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active item1">
+
+      <div class="container">
+        <div class="carousel-caption ">
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item item2">
+
+
+      <div class="container">
+        <div class="carousel-caption">
+
+
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item item3">
+
+
+      <div class="container">
+        <div class="carousel-caption ">
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+<br>
+<br>
+
+
+<br>
+<br>
+
+<form method="post", action="." >
+  <section  >
+    <div class="one">
+      <h1>Write Your preferred Movie and Rating</h1>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <input class="logo hidden" name="movie-name1" required='' type='text' autofocus autocomplete="on">
+      <input name="rating1" type="number" autocomplete="off" min="1" max="5" step="any">
+      <label alt='Enter Movie Name' placeholder='Adaptive Placeholder'></label>
+    </div>
+    <div class="form-group">
+      <input class="logo hidden" name="movie-name2" required='' type='text'  autocomplete="on">
+      <input name="rating2" type="number" autocomplete="off" min="1" max="5" step="any" >
+      <label alt='Enter Movie Name' placeholder='Adaptive Placeholder'></label>
+    </div>
+    <div class="form-group">
+      <input class="logo hidden" name="movie-name3" required='' type='text'  autocomplete="on">
+      <input name="rating3" type="number" autocomplete="off" min="1" max="5" step="any">
+      <label alt='Enter Movie Name' placeholder='Adaptive Placeholder'></label>
+    </div>
+    <div class="form-group">
+      <input class="logo hidden" name="movie-name4" required='' type='text'autocomplete="on">
+      <input name="rating4" type="number" autocomplete="off" min="1" max="5" step="any" >
+      <label alt='Enter Movie Name' placeholder='Adaptive Placeholder'></label>
+    </div>
+    <div class="form-group">
+      <input class="logo hidden" name="movie-name5" required='' type='text'autocomplete="on">
+      <input name="rating5" type="number" autocomplete="off" min="1" max="5" step="any">
+      <label alt='Enter Movie Name' placeholder='Adaptive Placeholder'></label>
+    </div>
+<br>
+<br>
+<br>
+
+</section>
+<section>
+<button class="button-89" role="button" onclick="run()" type="submit" value="submit">Submit</button>
+</section>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+    <div>
+  <section>
+     <img src= {{ poster }}>
+    <h1>{{sum}}</h1>
+  </section>
+    </div>
+    <br>
+<br>
+<br>
+<br>
+
+<!-- Footer -->
+<div class="container hidden">
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Company</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact US</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terms of Use</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cookies Policy</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 hidden">
+        <form action="mailto:rajrishabh374@gmail.com"></form>
+          <h5>If you have any project in your mind write us !</h5>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="project title">
+            <button class="btn btn-primary" type="button" value="send">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top hidden">
+      <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="https://www.instagram.com/casual_fry/" ><i class="social-icon fab fa-instagram"></i><svg class="bi" width="24" height="24">></svg></a></li>
+
+        <li class="ms-3"><a class="link-dark" href="https://wa.me/916207777090"><i class="social-icon fab fa-whatsapp"></i><svg class="bi" width="24" height="24"></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="tel:916207777090"><i class="social-icon fas fa-phone"></i><svg class="bi" width="24" height="24"></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+
+
+
+    <!-- Preloader JS -->
+    <script>
+      window.onload = function(){
+        document.getElementById("container").style.display = "none";
+        document.getElementById("").style.display = "none";
+      }
+      $(window).load(function(){
+        $('#loading').fadeOut();
+        $('#loading-img').delay(150).fadeOut('slow');
+      }),4000;
+    </script>
+</body>
+</html>

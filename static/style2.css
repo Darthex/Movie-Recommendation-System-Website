@@ -1,0 +1,250 @@
+html {
+  background-color: #e4e9fd;
+  background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%);
+  min-height: 1000px;
+  font-family: "helvetica neue";
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: auto;
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+.one h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.one h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  /* background-color: #7f669d; */
+}
+.one h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: black;
+}
+.twelve h3 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 160px;
+  text-align: center;
+  margin: auto;
+  white-space: nowrap;
+  padding-bottom: 13px;
+}
+.twelve h3:before {
+  background-color: #7f669d;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 75px;
+  margin-bottom: 5px;
+}
+.twelve h3:after {
+  background-color: #7f669d;
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  width: 75px;
+  margin-bottom: 0.25em;
+}
+
+h3 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+/* .ten h3 {
+  font-size: 34px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.ten h3:before {
+  background-color: #c50000;
+  border-radius: 0.25rem;
+  content: "";
+  display: block;
+  height: 0.25rem;
+  width: 42px;
+  margin-bottom: 1.25rem;
+} */
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #a683e3;
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: #a683e3;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button {
+  min-height: 50px;
+  width: 90px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #fff;
+  color: #a683e3;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #a683e3;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Preloader CSS */
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a683e3;
+  z-index: 100000;
+  position: fixed;
+}
+#loading {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  /* background: #fff; */
+  border-radius: 50%;
+  border-top: 10px solid #ff6b6b;
+  animation: animate 2s linear infinite;
+}
+@keyframes animate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+#loading::after {
+  transform: rotate(120deg);
+  border-top: 10px solid #feca57;
+}
+#loading::before {
+  transform: rotate(240deg);
+  border-top: 10px solid #48dbfb;
+}
+#loading::after,
+#loading::before {
+  content: "";
+  top: -10px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  /* background: #fff; */
+  border-radius: 50%;
+}
+#loading span {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  animation: a2 2s linear infinite;
+}
+@keyframes a2 {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+#content {
+  display: none;
+}
