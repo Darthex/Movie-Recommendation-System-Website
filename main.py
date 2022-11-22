@@ -29,7 +29,7 @@ def format1(obj):
 
 def model(vv1, vv2, vv3, vv4, vv5, r1, r2, r3, r4, r5):
     # Getting DataSet
-    movies_df = pd.read_csv('https://raw.githubusercontent.com/Darthex/Movie-Recommendation-System-Website/blob/main/static/movie_lower.csv', encoding='iso-8859-1')
+    movies_df = pd.read_csv('https://raw.githubusercontent.com/Darthex/Movie-Recommendation-System-Website/main/static/movie_lower.csv', encoding='iso-8859-1')
 
     # Cleaning Data
     movies_df['year'] = movies_df.title.str.extract('(\(\d\d\d\d\))', expand=False)
